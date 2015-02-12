@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Andrew H. McCallum</title>
+  <%= favicon_link_tag "glyph.ico" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -21,18 +22,24 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-left">
-        <li class="header-name"><%= link_to "Andrew H. McCallum", "#" %></li>
+        <li class="header-name"><%= link_to "Andrew H. McCallum", "/" %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "About", "#" %></li>
-        <li><%= link_to "CV", "#" %></li>
+        <li><%= link_to "CV", "/welcome/cv", :target => '_blank' %></li>
         <li><%= link_to "Contact", "#" %></li>
       </ul>
     </div>
   </div>
 </div>
-<div class="dotted-line"></div>
 <%= yield %>
 
 </body>
+<div class="navbar navbar-fixed-bottom navbar-inverse">
+  <div class="container">
+    <div class="navbar-header copyright-footer">
+      &#169; 2015 Alexander the Great
+    </div>
+  </div>
+</div>
 </html>
